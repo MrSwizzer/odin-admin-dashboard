@@ -5,7 +5,6 @@
 
 .header {
   padding: 10px 30px;
-  background-color: aqua;
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -35,8 +34,9 @@
 }
 
 .main-content {
+  border-top: solid 5px rgba(0, 0, 0, 0.3);
   padding: 10px 30px;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(221, 221, 240);
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -54,12 +54,13 @@
 
 .card {
   padding: 10px 20px;
-  border-left: 8px solid #29A40B;
+  background-color: white;
+  border-left: 8px solid #29a40b;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 3fr 1fr;
-box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card p {
@@ -86,4 +87,32 @@ box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.3);
   grid-area: 3 / 4 / 4 / 5;
   align-self: center;
   justify-self: center;
+}
+
+.announcements-wrapper {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.3);
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.trending-wrapper {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 3fr;
+}
+
+.trending-wrapper .icons {
+    display: grid;
+    grid-area: 1 / 1 / 5 / 2;
+    align-items: center;
+    justify-content: center;
 }
