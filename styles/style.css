@@ -22,24 +22,28 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 160px 1fr;
 }
 
 .header {
   padding: 10px 30px;
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1.5fr;
+  grid-template-rows: 50px 100px;
   align-items: center;
 }
 
 .header-top-right,
 .header-bottom-right {
   justify-self: end;
+  
 }
 
 .header-top-right p {
   display: inline-block;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .header input[type="search"] {
@@ -57,11 +61,34 @@ body {
   justify-self: center;
 }
 
+.header .greeting {
+  line-height: 0rem;
+  font-weight: bold;
+}
+
+.header .user {
+  line-height: 0rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .header-top-right,
 .header-top-left {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 25px;
+}
+
+.header button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: cornflowerblue;
+  border-radius: 25px;
+  border: none;
+  width: 5em;
+  height: 2em;
+  margin-left: 15px;
 }
 
 .sidebar {
@@ -185,8 +212,12 @@ body {
   gap: 5px;
 }
 
-.announcements-wrapper:nth-child(-n + 2) {
-  background-color: orange;
+.title {
+  line-height: 0rem;
+}
+
+.announcements:nth-child(-n + 2) {
+  border-bottom: 1px grey solid;
 }
 
 .trending-wrapper {
